@@ -9,24 +9,25 @@ let process = require('process');
 */
 
 // --- DELETE THE LINES STARTING HERE ---
-let removeThisToStart = true;
+// let removeThisToStart = true;
 
-if (removeThisToStart) {
-  console.log('Hey! Open up storeWithObjects.js to see how to get started.');
-  process.exit();
-}
+// if (removeThisToStart) {
+//   console.log('Hey! Open up storeWithObjects.js to see how to get started.');
+//   process.exit();
+// }
 
 // --- DELETE THE LINES ENDING HERE ---
 
 /**
  * Creates and returns a new user (as an object).
  */
-function newUser(firstName, lastName, budget) {
+function newUser(firstName, lastName, budget, email) {
   let user = [];
 
   user['firstName'] = firstName;
   user['lastName'] = lastName;
   user['budget'] = budget;
+  user['email'] = email;
 
   return user;
 }
@@ -48,7 +49,7 @@ function newSofa(name, price) {
  * and `false` otherwise.
  */
 function userCanAffordSofa(user, sofa) {
-  // This is your job. :)
+
 
   return user['budget'] >= sofa['price'];
 }
@@ -57,7 +58,7 @@ let allUsers = [
   newUser('Alyssa', 'Morris', 1800.00),
   newUser('Mindy', 'Weaver', 200.00),
   newUser('Louis', 'Washington', 850.00),
-  newUser('Kevin', 'Isaacs', 80.00),
+  newUser('Kevin', 'Isaacs', 805.00),
 ];
 
 let sofa = newSofa('Nice Sofa', 800.00);
