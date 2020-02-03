@@ -7,12 +7,13 @@ let process = require('process');
 
 let user = {};
 
-user['firstName'] = '<Change This>';
-user['lastName'] = '<Change This>';
-user['currentLocation'] = '<Change This>';
-user['favoriteSongs'] = ['One Song', 'Another Great Song', 'Last Great Song'];
-user['age'] = 108;
-
+user['firstName'] = 'Peyton';
+user['lastName'] = 'Manning';
+user['currentLocation'] = 'New York';
+user['favoriteSongs'] = ['the box', 'caroline', 'Headlines'];
+user['age'] = 43;
+user['favoriteFood'] = ['burritos', 'pizza', 'short ribs'];
+user['favoriteMovies'] = ['Bad Boys', 'Interstellar', 'the matrix'];
 // To get started, set user['canBeDisplayed'] to true instead of false
 user['canBeDisplayed'] = true;
 
@@ -34,9 +35,18 @@ if (user['age'] >= 100) {
 
 console.log('Looks like you have great taste in music. Your favorite songs:');
 
-for (let i = 0; i < user['favoriteSongs'].length; i += 1) {
-  let songPosition = i + 1;
-  let songName = user['favoriteSongs'][i];
+printFavorites(user['favoriteSongs']);
 
-  console.log(`${songPosition}. ${songName}`);
+console.log('You have really interesting movie favorites: Favorite Movies are: ');
+
+printFavorites(user['favoriteMovies']);
+
+function printFavorites(list) {
+
+  for(let i = 0; i < list.length; i++ ){
+    let bullets = i + 1;
+    let itemName = list[i];
+    console.log(` ${bullets}. ${itemName}`);
+  }
+  console.log(' ');
 }
